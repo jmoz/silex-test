@@ -1,5 +1,5 @@
 {
-    "hash": "f55e423b4bbb397c3bf6a749c12db1a9",
+    "hash": "39ebc74702b254895c1fab5c42e60c78",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -305,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing",
-                "reference": "ad7995b5cf8b62ae55ac513ad5d2926a74c8fded"
+                "reference": "ad25445e4d61c32c012eed3d75e9f0bc7298f064"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Routing/archive/ad7995b5cf8b62ae55ac513ad5d2926a74c8fded.zip",
-                "reference": "ad7995b5cf8b62ae55ac513ad5d2926a74c8fded",
+                "url": "https://github.com/symfony/Routing/archive/ad25445e4d61c32c012eed3d75e9f0bc7298f064.zip",
+                "reference": "ad25445e4d61c32c012eed3d75e9f0bc7298f064",
                 "shasum": ""
             },
             "require": {
@@ -327,7 +327,7 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "1352849156",
+            "time": "1353004236",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -355,6 +355,55 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com"
+        },
+        {
+            "name": "twig/twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/fabpot/Twig.git",
+                "reference": "7072d8f54f79b878cd17c4192d8a4a1f45bef173"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/fabpot/Twig/archive/7072d8f54f79b878cd17c4192d8a4a1f45bef173.zip",
+                "reference": "7072d8f54f79b878cd17c4192d8a4a1f45bef173",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "time": "1353087895",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ]
         }
     ],
     "packages-dev": null,
