@@ -1,1 +1,85 @@
-facebook
+{% extends 'base.html.twig' %}
+
+{% block head %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="fb-root"></div>
+<script>
+var add_login = function () {
+    $('#facebook-login').unbind('click').removeAttr('disabled')
+    $('#facebook-login').click(login)
+    console.log('add_login()')
+}
+
+var add_logged_in = function () {
+    $('#facebook-login').unbind('click')
+    $('#facebook-login').text('Already logged in').attr('disabled', true)
+    console.log('add_logged_in()')
+    api_me()
+}
+
+var api_me = function () {
+    FB.api('/me', function (response) {
+        console.log('api /me')
+        console.log(response)
+        display_me(response)
+    })
+}
+
+var display_me = function (response) {
+    $('<p>Logged in as '+response.name+' located at '+response.location.name+'</p>').insertAfter($('#facebook-login'))
+}
+
+var login = function () {
+    FB.login(function(response) {
+        if (response.authResponse) {
+            console.log(response)
+            add_logged_in()
+        } else {
+            console.log(response)
+            add_login()
+        }
+    });
+}
+
+window.fbAsyncInit = function() {
+    FB.init({
+        appId      : '{{ app.facebook_app_id }}', // App ID
+        channelUrl : '//{{ app.facebook_domain }}/channel.html', // Channel File
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+    });
+
+    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+            console.log('connected')
+            add_logged_in()
+        } else if (response.status === 'not_authorized') {
+            console.log('not_authorized')
+            add_login()
+        } else {
+            console.log('not_logged_in')
+            add_login()
+        }
+    });
+
+};
+
+// Load the SDK Asynchronously
+(function(d){
+ var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+ if (d.getElementById(id)) {return;}
+ js = d.createElement('script'); js.id = id; js.async = true;
+ js.src = "//connect.facebook.net/en_US/all.js";
+ ref.parentNode.insertBefore(js, ref);
+}(document));
+</script>
+
+<h1>facebook</h1>
+
+<button id="facebook-login">Login with Facebook</button>
+
+{% endblock %}

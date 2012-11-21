@@ -10,6 +10,10 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../views'
 ));
 
+$app['facebook_app_id'] = '193820144076033';
+$app['facebook_app_secret'] = 'c5b04d7ac809cc3edb5b339917aacbf9';
+$app['facebook_domain'] = 'dev.silex-test';
+
 /**
  * Index
  */
