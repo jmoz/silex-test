@@ -1,8 +1,15 @@
 {
+	"autoload": {
+		"psr-0": {
+			"RatchetApp": "src"
+		}
+	},
     "require": {
         "silex/silex": "1.0.*",
         "twig/twig": ">=1.8,<2.0-dev",
-        "symfony/twig-bridge": "2.1.*"
+        "symfony/twig-bridge": "2.1.*",
+        "predis/predis-async": "dev-master",
+		"cboden/Ratchet": "0.2.*"
     },
     "minimum-stability": "dev"
 }
