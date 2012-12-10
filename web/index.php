@@ -28,4 +28,11 @@ $app->get('/facebook', function () use ($app) {
     return $app['twig']->render('facebook.html.twig');
 })->bind('facebook');
 
+/**
+ * Websockets
+ */
+$app->get('/websockets', function () use ($app) {
+    return $app['twig']->render('websockets.html.twig');
+})->bind('websockets');
+
 $app->run();
