@@ -28,7 +28,7 @@ ab.connect("ws://localhost:8080",
   	// WAMP session is gone
   	function (code, reason) {
     	// things to do once the session fails
-    	notify("Error session gone", 'error');
+    	notify(reason, 'error');
     	console.log("ab: session gone code " + code + " reason " + reason)
   	}
 );
@@ -188,11 +188,13 @@ $('#redispub').keypress(function (e) {
 				<input type="text" id="redispub" placeholder="">
 			</div>
 		</div>
+		<div class="control-group">
+			<label class="control-label" for="response"><strong>Response:</strong></label>
+			<div class="controls">
+				<textarea id="response" rows="10"></textarea>
+			</div>
+		</div>
 	</form>
-
-	<h3>Response:</h3>
-
-	<textarea id="response" rows="5"></textarea>
 
 </div>
 {% endblock %}
