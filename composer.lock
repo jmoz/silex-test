@@ -97,26 +97,31 @@
         },
         {
             "name": "guzzle/common",
-            "version": "v3.0.5",
+            "version": "dev-master",
             "target-dir": "Guzzle/Common",
             "source": {
                 "type": "git",
                 "url": "git://github.com/guzzle/common.git",
-                "reference": "v3.0.5"
+                "reference": "v3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/common/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/common/archive/v3.0.6.zip",
+                "reference": "v3.0.6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/event-dispatcher": "2.1.*"
+                "symfony/event-dispatcher": ">=2.1"
             },
-            "time": "2012-11-19 00:15:33",
+            "time": "1355117104",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Common": ""
@@ -136,28 +141,34 @@
         },
         {
             "name": "guzzle/http",
-            "version": "v3.0.5",
+            "version": "dev-master",
             "target-dir": "Guzzle/Http",
             "source": {
                 "type": "git",
                 "url": "git://github.com/guzzle/http.git",
-                "reference": "v3.0.5"
+                "reference": "v3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/http/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/http/archive/v3.0.6.zip",
+                "reference": "v3.0.6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "guzzle/common": "self.version",
                 "guzzle/parser": "self.version",
-                "guzzle/stream": "self.version"
+                "guzzle/stream": "self.version",
+                "ext-curl": "*"
             },
-            "time": "2012-11-18 05:28:55",
+            "time": "1355101440",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Http": ""
@@ -185,25 +196,30 @@
         },
         {
             "name": "guzzle/parser",
-            "version": "v3.0.5",
+            "version": "dev-master",
             "target-dir": "Guzzle/Parser",
             "source": {
                 "type": "git",
                 "url": "git://github.com/guzzle/parser.git",
-                "reference": "v3.0.5"
+                "reference": "v3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/parser/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/parser/archive/v3.0.6.zip",
+                "reference": "v3.0.6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "2012-11-19 00:07:13",
+            "time": "1354898711",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Parser": ""
@@ -224,26 +240,31 @@
         },
         {
             "name": "guzzle/stream",
-            "version": "v3.0.5",
+            "version": "dev-master",
             "target-dir": "Guzzle/Stream",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/stream",
-                "reference": "v3.0.5"
+                "reference": "v3.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/guzzle/stream/archive/v3.0.5.zip",
-                "reference": "v3.0.5",
+                "url": "https://github.com/guzzle/stream/archive/v3.0.6.zip",
+                "reference": "v3.0.6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "guzzle/common": "self.version"
             },
-            "time": "2012-11-11 23:54:57",
+            "time": "1354898711",
             "type": "library",
-            "installation-source": "dist",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
                     "Guzzle\\Stream": ""
@@ -273,12 +294,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Pimple.git",
-                "reference": "86df0604a10c5faf20b466ae6a0b762cc6ed0a35"
+                "reference": "v1.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Pimple/archive/86df0604a10c5faf20b466ae6a0b762cc6ed0a35.zip",
-                "reference": "86df0604a10c5faf20b466ae6a0b762cc6ed0a35",
+                "url": "https://github.com/fabpot/Pimple/archive/v1.0.1.zip",
+                "reference": "v1.0.1",
                 "shasum": ""
             },
             "require": {
@@ -319,12 +340,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/nrk/predis.git",
-                "reference": "51b466267d8f11aa0ad6da1ae13f9d86b1e4837e"
+                "reference": "bfd96b15dc3d8265735f1904dc4499b2b349e5c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/nrk/predis/archive/51b466267d8f11aa0ad6da1ae13f9d86b1e4837e.zip",
-                "reference": "51b466267d8f11aa0ad6da1ae13f9d86b1e4837e",
+                "url": "https://github.com/nrk/predis/archive/bfd96b15dc3d8265735f1904dc4499b2b349e5c9.zip",
+                "reference": "bfd96b15dc3d8265735f1904dc4499b2b349e5c9",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +355,7 @@
                 "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol",
                 "ext-curl": "Allows access to Webdis when paired with phpiredis"
             },
-            "time": "1353535043",
+            "time": "1355318886",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -542,12 +563,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Silex.git",
-                "reference": "7e5862934aa831ededc9ca188a56816dc46e70b4"
+                "reference": "c2dff3ca9e8ee4e5c9652a366c39eb3b3c91ca53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Silex/archive/7e5862934aa831ededc9ca188a56816dc46e70b4.zip",
-                "reference": "7e5862934aa831ededc9ca188a56816dc46e70b4",
+                "url": "https://github.com/fabpot/Silex/archive/c2dff3ca9e8ee4e5c9652a366c39eb3b3c91ca53.zip",
+                "reference": "c2dff3ca9e8ee4e5c9652a366c39eb3b3c91ca53",
                 "shasum": ""
             },
             "require": {
@@ -582,7 +603,7 @@
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "1354471498",
+            "time": "1355490904",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -671,18 +692,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation",
-                "reference": "5874fa916281cdaebe7705abc0331ed63ee27717"
+                "reference": "e39568eeae07b43af51402097acef64d2c67642d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/HttpFoundation/archive/5874fa916281cdaebe7705abc0331ed63ee27717.zip",
-                "reference": "5874fa916281cdaebe7705abc0331ed63ee27717",
+                "url": "https://github.com/symfony/HttpFoundation/archive/e39568eeae07b43af51402097acef64d2c67642d.zip",
+                "reference": "e39568eeae07b43af51402097acef64d2c67642d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1354788055",
+            "time": "1355433709",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -714,12 +735,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel",
-                "reference": "0cc40d8b7a2eaa470a086cb26dcb4edc701e47f5"
+                "reference": "983d897cbff0205ce6460a853cc0e652d8f5387c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/HttpKernel/archive/0cc40d8b7a2eaa470a086cb26dcb4edc701e47f5.zip",
-                "reference": "0cc40d8b7a2eaa470a086cb26dcb4edc701e47f5",
+                "url": "https://github.com/symfony/HttpKernel/archive/983d897cbff0205ce6460a853cc0e652d8f5387c.zip",
+                "reference": "983d897cbff0205ce6460a853cc0e652d8f5387c",
                 "shasum": ""
             },
             "require": {
@@ -745,7 +766,7 @@
                 "symfony/dependency-injection": "2.1.*",
                 "symfony/finder": "2.1.*"
             },
-            "time": "1354788055",
+            "time": "1355434907",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -776,12 +797,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing",
-                "reference": "17109bfef57e52b35d76db4d35b3b66b1d176701"
+                "reference": "9391ec1744dda220802bbfc406edf20c711f8b36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Routing/archive/17109bfef57e52b35d76db4d35b3b66b1d176701.zip",
-                "reference": "17109bfef57e52b35d76db4d35b3b66b1d176701",
+                "url": "https://github.com/symfony/Routing/archive/9391ec1744dda220802bbfc406edf20c711f8b36.zip",
+                "reference": "9391ec1744dda220802bbfc406edf20c711f8b36",
                 "shasum": ""
             },
             "require": {
@@ -798,7 +819,7 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "1354721823",
+            "time": "1355481656",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -892,18 +913,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "6810dbe8a7be204813a4397b1bddcfdb875fe2e2"
+                "reference": "2757f482c679aa00bb8c7fdfcb337f2bb922fa5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/6810dbe8a7be204813a4397b1bddcfdb875fe2e2.zip",
-                "reference": "6810dbe8a7be204813a4397b1bddcfdb875fe2e2",
+                "url": "https://github.com/fabpot/Twig/archive/2757f482c679aa00bb8c7fdfcb337f2bb922fa5a.zip",
+                "reference": "2757f482c679aa00bb8c7fdfcb337f2bb922fa5a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1354387289",
+            "time": "1355236216",
             "type": "library",
             "extra": {
                 "branch-alias": {

@@ -1,5 +1,10 @@
 <?php
 
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+use RatchetApp\PredisHelper;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
@@ -34,5 +39,29 @@ $app->get('/facebook', function () use ($app) {
 $app->get('/websockets', function () use ($app) {
     return $app['twig']->render('websockets.html.twig');
 })->bind('websockets');
+
+/**
+ * Redis pubsub
+ */
+$app->match('/pubsub', function (Request $request) use ($app) {
+	if ($request->getMethod() == 'GET') {
+		return $app['twig']->render('pubsub.html.twig');
+	}
+
+    if ($request->request->get('pub') && $request->request->get('channel')) {
+    	$channel = $request->request->get('channel');
+    	$payload = $request->request->get('pub');
+
+    	$pr = new PredisHelper();
+    	$pr->publish($channel, $payload);
+    	
+    	return new Response(sprintf('Published %s to %s', $payload, $channel));
+    }
+    
+    return new Response("Need pub and channel", 400);
+    
+})
+->method('GET|POST')
+->bind('pubsub');
 
 $app->run();
