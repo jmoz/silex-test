@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Websockets, Ratchet, Redis pubsub demo by James Morris{% endblock %}
+
 {% block head %}
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
 
@@ -149,7 +151,24 @@ $('#redispub').keypress(function (e) {
 {% block content %}
 <div class="container">
 
-	<h1>Pubsub test</h1>
+	<h1>Websockets, Ratchet, Redis pubsub test</h1>
+
+	<p class="lead">This is a proof of concept/tech demo showing how <strong>websockets and ratchet</strong> can be used along with <strong>Redis' pubsub</strong> publish and subscribe.</p>
+
+	<p>You can use the form below to subscribe/unsubscribe to a channel.  When you subscribe you also subscribe to the corresponding Redis channel.  So if using the cli you connect to Redis and do a <code>PUBLISH channel:jmoz foo</code>, the message will be published from Redis to the websocket server then to the browser.</p>
+
+	<p>You can publish via websockets to the WS server which will then broadcast to connected clients.  This does not touch Redis.</p>
+
+	<p>You can make an AJAX request to this app which will then use REDIS and <code>PUBLISH</code> which will be picked up by the WS server and broadcast to clients.  This is a way to demo the raw Redis pubsub without using the cli.</p>
+
+	<p>The following tech is used:</p>
+
+	<ul>
+		<li><a href="http://socketo.me/">Ratchet</a> - the core WAMP app that uses an event loop, handles websockets and subscribes to Redis.</li>
+		<li><a href="https://github.com/nrk/predis-async">Predis-async</a> - the client library for Redis that implements the <a href="http://reactphp.org/">react</a> event loop.</li>
+		<li><a href="http://silex.sensiolabs.org/">Silex</a> - used as the framework and provides the AJAX endpoint to publish via Redis.</li>
+		<li><a href="http://autobahn.ws/js">AutobahnJS</a> - the JS library to implement websockets.</li>
+	</ul>
 
 	<h3>Notifications:</h3>
 
@@ -195,6 +214,8 @@ $('#redispub').keypress(function (e) {
 			</div>
 		</div>
 	</form>
+
+	<p><strong>Developed by <a href="http://jmoz.co.uk" title="James Morris JMOZ">James Morris</a>.  <a href="http://blog.jmoz.co.uk" title="James Morris blog">Blog</a>, <a href="http://twitter.com/jwmoz" title="James Morris twitter">Twitter</a>.</strong></p>
 
 </div>
 {% endblock %}
