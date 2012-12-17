@@ -4,5 +4,6 @@
 	"ws_port": 8080,
 	"facebook_app_id": "193820144076033",
 	"facebook_app_secret": "c5b04d7ac809cc3edb5b339917aacbf9",
-	"facebook_domain": "%domain%"
+	"facebook_domain": "%domain%",
+	"app.chat.port": 8081
 }

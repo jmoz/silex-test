@@ -36,7 +36,7 @@ $app->get('/facebook', function () use ($app) {
  * Websockets
  */
 $app->get('/websockets', function () use ($app) {
-    return $app['twig']->render('websockets.html.twig');
+    return $app['twig']->render('websockets.html.twig', array('ws_domain' => $app['ws_domain'], 'ws_port' => $app['app.chat.port']));
 })->bind('websockets');
 
 /**
