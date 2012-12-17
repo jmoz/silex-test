@@ -8,16 +8,15 @@ use RatchetApp\PredisHelper;
 require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
-$app['debug'] = true;
 
+$env = getenv('APP_ENV') ?: 'prod';
+$app->register(new Igorw\Silex\ConfigServiceProvider(__DIR__."/../config/$env.json", array(
+	'domain' => getenv('APP_DOMAIN')
+)));
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__ . '/../views'
 ));
-
-$app['facebook_app_id'] = '193820144076033';
-$app['facebook_app_secret'] = 'c5b04d7ac809cc3edb5b339917aacbf9';
-$app['facebook_domain'] = 'dev.silex-test';
 
 /**
  * Index
@@ -45,7 +44,7 @@ $app->get('/websockets', function () use ($app) {
  */
 $app->match('/pubsub', function (Request $request) use ($app) {
 	if ($request->getMethod() == 'GET') {
-		return $app['twig']->render('pubsub.html.twig');
+		return $app['twig']->render('pubsub.html.twig', array('ws_domain' => $app['ws_domain'], 'ws_port' => $app['ws_port']));
 	}
 
     if ($request->request->get('pub') && $request->request->get('channel')) {

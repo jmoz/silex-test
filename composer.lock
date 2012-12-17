@@ -1,5 +1,5 @@
 {
-    "hash": "13671f332b39513a2d440d2c0b512c5b",
+    "hash": "35534a3f5e1dd7195d24f0109211cf4f",
     "packages": [
         {
             "name": "cboden/Ratchet",
@@ -289,6 +289,61 @@
             ]
         },
         {
+            "name": "igorw/config-service-provider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/igorw/ConfigServiceProvider",
+                "reference": "89ba94082e5b4b844f88ac36cf61c14441c2b884"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/igorw/ConfigServiceProvider/archive/89ba94082e5b4b844f88ac36cf61c14441c2b884.zip",
+                "reference": "89ba94082e5b4b844f88ac36cf61c14441c2b884",
+                "shasum": ""
+            },
+            "require": {
+                "silex/silex": "1.0.*"
+            },
+            "require-dev": {
+                "symfony/yaml": "2.1.*"
+            },
+            "suggest": {
+                "symfony/yaml": "2.1.*"
+            },
+            "time": "1354805925",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Igorw\\Silex": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/igorw/ConfigServiceProvider/contributors"
+                }
+            ],
+            "description": "A JSON/Yaml-based config ServiceProvider for Silex.",
+            "keywords": [
+                "silex"
+            ]
+        },
+        {
             "name": "pimple/pimple",
             "version": "dev-master",
             "source": {
@@ -340,12 +395,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/nrk/predis.git",
-                "reference": "bfd96b15dc3d8265735f1904dc4499b2b349e5c9"
+                "reference": "dcb4093046e67f01d1ce260ab4bb2d6d8faf714b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/nrk/predis/archive/bfd96b15dc3d8265735f1904dc4499b2b349e5c9.zip",
-                "reference": "bfd96b15dc3d8265735f1904dc4499b2b349e5c9",
+                "url": "https://github.com/nrk/predis/archive/dcb4093046e67f01d1ce260ab4bb2d6d8faf714b.zip",
+                "reference": "dcb4093046e67f01d1ce260ab4bb2d6d8faf714b",
                 "shasum": ""
             },
             "require": {
@@ -355,7 +410,7 @@
                 "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol",
                 "ext-curl": "Allows access to Webdis when paired with phpiredis"
             },
-            "time": "1355318886",
+            "time": "1355589960",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -692,18 +747,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation",
-                "reference": "e39568eeae07b43af51402097acef64d2c67642d"
+                "reference": "7572849520522cc1ac4b63357c39b6c2d5e5c2b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/HttpFoundation/archive/e39568eeae07b43af51402097acef64d2c67642d.zip",
-                "reference": "e39568eeae07b43af51402097acef64d2c67642d",
+                "url": "https://github.com/symfony/HttpFoundation/archive/7572849520522cc1ac4b63357c39b6c2d5e5c2b2.zip",
+                "reference": "7572849520522cc1ac4b63357c39b6c2d5e5c2b2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1355433709",
+            "time": "1355519009",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -735,12 +790,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel",
-                "reference": "983d897cbff0205ce6460a853cc0e652d8f5387c"
+                "reference": "0e93b5f2068ba9efe2c943681d1e39ab58207a35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/HttpKernel/archive/983d897cbff0205ce6460a853cc0e652d8f5387c.zip",
-                "reference": "983d897cbff0205ce6460a853cc0e652d8f5387c",
+                "url": "https://github.com/symfony/HttpKernel/archive/0e93b5f2068ba9efe2c943681d1e39ab58207a35.zip",
+                "reference": "0e93b5f2068ba9efe2c943681d1e39ab58207a35",
                 "shasum": ""
             },
             "require": {
@@ -766,7 +821,7 @@
                 "symfony/dependency-injection": "2.1.*",
                 "symfony/finder": "2.1.*"
             },
-            "time": "1355434907",
+            "time": "1355589897",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -797,12 +852,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing",
-                "reference": "9391ec1744dda220802bbfc406edf20c711f8b36"
+                "reference": "c259a67cf029b106048c91cd74a7a1284c321e65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/Routing/archive/9391ec1744dda220802bbfc406edf20c711f8b36.zip",
-                "reference": "9391ec1744dda220802bbfc406edf20c711f8b36",
+                "url": "https://github.com/symfony/Routing/archive/c259a67cf029b106048c91cd74a7a1284c321e65.zip",
+                "reference": "c259a67cf029b106048c91cd74a7a1284c321e65",
                 "shasum": ""
             },
             "require": {
@@ -819,7 +874,7 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "1355481656",
+            "time": "1355525421",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -913,18 +968,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "2757f482c679aa00bb8c7fdfcb337f2bb922fa5a"
+                "reference": "6c01c14fd8f42348a032148ebecb6e034e9e18bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/archive/2757f482c679aa00bb8c7fdfcb337f2bb922fa5a.zip",
-                "reference": "2757f482c679aa00bb8c7fdfcb337f2bb922fa5a",
+                "url": "https://github.com/fabpot/Twig/archive/6c01c14fd8f42348a032148ebecb6e034e9e18bd.zip",
+                "reference": "6c01c14fd8f42348a032148ebecb6e034e9e18bd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1355236216",
+            "time": "1355644506",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -963,6 +1018,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "predis/predis-async": 20
+        "predis/predis-async": 20,
+        "igorw/config-service-provider": 20
     }
 }

@@ -18,7 +18,7 @@ var defaultChannels = ['channel:jmoz'];
 $(function() {
 
 // connect to WAMP server
-ab.connect("ws://dev.silex-test:8080",
+ab.connect("ws://{{ ws_domain }}:{{ ws_port }}",
   	// WAMP session was established
   	function (session) {
         // things to do once the session has been established

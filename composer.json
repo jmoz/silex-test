@@ -9,7 +9,8 @@
         "twig/twig": ">=1.8,<2.0-dev",
         "symfony/twig-bridge": "2.1.*",
         "predis/predis-async": "dev-master",
-		"cboden/Ratchet": "0.2.*"
+		"cboden/Ratchet": "0.2.*",
+        "igorw/config-service-provider": "1.0.*@dev"
     },
     "minimum-stability": "dev"
 }
