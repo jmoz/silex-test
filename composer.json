@@ -12,5 +12,8 @@
 		"cboden/Ratchet": "0.2.*",
         "igorw/config-service-provider": "1.0.*@dev"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "scripts": {
+        "post-install-cmd": "supervisorctl restart pusher"
+    }
 }
