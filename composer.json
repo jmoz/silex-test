@@ -8,6 +8,7 @@
         "silex/silex": "1.0.*",
         "twig/twig": ">=1.8,<2.0-dev",
         "symfony/twig-bridge": "2.1.*",
+        "ext-phpiredis": "*",
         "predis/predis-async": "dev-master",
 		"cboden/Ratchet": "0.2.*",
         "igorw/config-service-provider": "1.0.*@dev"
