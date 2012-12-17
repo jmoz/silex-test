@@ -1,5 +1,5 @@
 {
-    "hash": "35534a3f5e1dd7195d24f0109211cf4f",
+    "hash": "e673a07191abb76f2a16d98d107df8c8",
     "packages": [
         {
             "name": "cboden/Ratchet",
@@ -67,7 +67,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "1351909043",
+            "time": "2012-11-03 02:17:23",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -114,7 +114,7 @@
                 "php": ">=5.3.2",
                 "symfony/event-dispatcher": ">=2.1"
             },
-            "time": "1355117104",
+            "time": "2012-12-10 05:25:04",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -161,7 +161,7 @@
                 "guzzle/stream": "self.version",
                 "ext-curl": "*"
             },
-            "time": "1355101440",
+            "time": "2012-12-10 01:04:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -212,7 +212,7 @@
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "1354898711",
+            "time": "2012-12-07 16:45:11",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -257,7 +257,7 @@
                 "php": ">=5.3.2",
                 "guzzle/common": "self.version"
             },
-            "time": "1354898711",
+            "time": "2012-12-07 16:45:11",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -311,7 +311,7 @@
             "suggest": {
                 "symfony/yaml": "2.1.*"
             },
-            "time": "1354805925",
+            "time": "2012-12-06 14:58:45",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -360,7 +360,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "1352622754",
+            "time": "2012-11-11 08:32:34",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -410,7 +410,7 @@
                 "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol",
                 "ext-curl": "Allows access to Webdis when paired with phpiredis"
             },
-            "time": "1355589960",
+            "time": "2012-12-15 16:46:00",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -456,7 +456,7 @@
                 "react/event-loop": "0.2.*",
                 "predis/predis": "0.8.*"
             },
-            "time": "1352369972",
+            "time": "2012-11-08 10:19:32",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -504,7 +504,7 @@
                 "ext-libevent": ">=0.0.5",
                 "ext-libev": "*"
             },
-            "time": "1352761205",
+            "time": "2012-11-12 23:00:05",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -546,7 +546,7 @@
                 "react/event-loop": "0.2.*",
                 "react/stream": "0.2.*"
             },
-            "time": "1352121935",
+            "time": "2012-11-05 13:25:35",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -590,7 +590,7 @@
                 "react/event-loop": "0.2.*",
                 "react/promise": "1.0.*"
             },
-            "time": "1353313450",
+            "time": "2012-11-19 08:24:10",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -658,7 +658,7 @@
                 "symfony/css-selector": ">=2.1,<2.3-dev",
                 "symfony/dom-crawler": ">=2.1,<2.3-dev"
             },
-            "time": "1355490904",
+            "time": "2012-12-14 13:15:04",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -716,7 +716,7 @@
                 "symfony/dependency-injection": "2.1.*",
                 "symfony/http-kernel": "2.1.*"
             },
-            "time": "1354788055",
+            "time": "2012-12-06 10:00:55",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -758,7 +758,7 @@
             "require": {
                 "php": ">=5.3.3"
             },
-            "time": "1355519009",
+            "time": "2012-12-14 21:03:29",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -821,7 +821,7 @@
                 "symfony/dependency-injection": "2.1.*",
                 "symfony/finder": "2.1.*"
             },
-            "time": "1355589897",
+            "time": "2012-12-15 16:44:57",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -874,7 +874,7 @@
                 "symfony/config": "2.2.*",
                 "symfony/yaml": "2.2.*"
             },
-            "time": "1355525421",
+            "time": "2012-12-14 22:50:21",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -938,7 +938,7 @@
                 "symfony/yaml": "2.1.*",
                 "symfony/security": "2.1.*"
             },
-            "time": "1354788055",
+            "time": "2012-12-06 10:00:55",
             "type": "symfony-bridge",
             "installation-source": "source",
             "autoload": {
@@ -979,7 +979,7 @@
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1355644506",
+            "time": "2012-12-16 07:55:06",
             "type": "library",
             "extra": {
                 "branch-alias": {
