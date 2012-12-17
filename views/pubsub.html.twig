@@ -18,7 +18,7 @@ var defaultChannels = ['channel:jmoz'];
 $(function() {
 
 // connect to WAMP server
-ab.connect("ws://localhost:8080",
+ab.connect("ws://dev.silex-test:8080",
   	// WAMP session was established
   	function (session) {
         // things to do once the session has been established
@@ -153,7 +153,7 @@ $('#redispub').keypress(function (e) {
 
 	<h1>Websockets, Ratchet, Redis pubsub test</h1>
 
-	<p class="lead">This is a proof of concept/tech demo showing how <strong>websockets and ratchet</strong> can be used along with <strong>Redis' pubsub</strong> publish and subscribe.</p>
+	<p class="lead">This is a proof of concept <em>HTML5 websocket app</em> showing how <strong>ratchet and websockets</strong> can be used along with <strong>Redis' pubsub</strong> publish and subscribe.</p>
 
 	<p>You can use the form below to subscribe/unsubscribe to a channel.  When you subscribe you also subscribe to the corresponding Redis channel.  So if using the cli you connect to Redis and do a <code>PUBLISH channel:jmoz foo</code>, the message will be published from Redis to the websocket server then to the browser.</p>
 
