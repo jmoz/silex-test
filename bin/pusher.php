@@ -14,7 +14,7 @@ $client->connect(array($pusher, 'init'));
 
 // Set up our WebSocket server for clients wanting real-time updates
 $webSock = new React\Socket\Server($loop);
-$webSock->listen(8080, '127.0.0.1');
+$webSock->listen(8080, '0.0.0.0');
 $webServer = new Ratchet\Server\IoServer(
     new Ratchet\WebSocket\WsServer(
         new Ratchet\Wamp\WampServer(
