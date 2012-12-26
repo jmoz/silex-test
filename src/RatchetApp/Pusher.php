@@ -5,24 +5,42 @@ use Ratchet\ConnectionInterface;
 use Ratchet\Wamp\WampServerInterface;
 
 class Pusher implements WampServerInterface {
+    
     /**
      * A lookup of all the topics clients have subscribed to
      */
     public $subscribedTopics = array();
+
     protected $redis;
+
+    public function timedCallback() {
+        if (array_key_exists('debug', $this->subscribedTopics)) {
+            $topic = $this->subscribedTopics['debug'];
+            $topic->broadcast('Unix timestamp is ' . time());
+        }
+    }
 
     public function init($client) {
         $this->redis = $client;
         $this->log("Connected to Redis, now listening for incoming messages...");
     }
 
+    /**
+     * echo the message and also broadcast to channel 'debug'
+     */
     public function log($value)
     {
-        echo sprintf("Pusher: %s\n", $value);
+        $message = sprintf("Pusher: %s", $value);
+        echo "$message\n";
+        if (array_key_exists('debug', $this->subscribedTopics)) {
+            $topic = $this->subscribedTopics['debug'];
+            $topic->broadcast($message);
+        }
     }
 
     public function onSubscribe(ConnectionInterface $conn, $topic) {
         $this->log("onSubscribe");
+        $this->log("session id {$conn->WAMP->sessionId}");
         $this->log("topic: $topic {$topic->count()}");
         // When a visitor subscribes to a topic link the Topic object in a  lookup array
         if (!array_key_exists($topic->getId(), $this->subscribedTopics)) {
@@ -61,11 +79,11 @@ class Pusher implements WampServerInterface {
     }
 
     public function onOpen(ConnectionInterface $conn) {
-        $this->log("onOpen");
+        $this->log("onOpen ({$conn->WAMP->sessionId})");
     }
 
     public function onClose(ConnectionInterface $conn) {
-        $this->log("onClose");
+        $this->log("onClose ({$conn->WAMP->sessionId})");
     }
 
     public function onCall(ConnectionInterface $conn, $id, $topic, array $params) {
@@ -75,7 +93,6 @@ class Pusher implements WampServerInterface {
     }
 
     public function onPublish(ConnectionInterface $conn, $topic, $event, array $exclude, array $eligible) {
-        // In this application if clients send data it's because the user hacked around in console
         $this->log("onPublish");
         $topic->broadcast("$topic: $event");
     }
