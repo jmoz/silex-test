@@ -18,4 +18,8 @@ The following tech is used:
 
 Source code is [on github jmoz/silex-test](https://github.com/jmoz/silex-test).  App is running at [silex-test.jmoz.co.uk/pubsub](http://silex-test.jmoz.co.uk/pubsub).
 
+## Dependencies
+
+Predis-async needs the [phpiredis extension](https://github.com/nrk/phpiredis).  You may also need to [read this](https://github.com/nrk/phpiredis/issues/7).
+
 **Developed by [James Morris](http://jmoz.co.uk).  [Blog](http://blog.jmoz.co.uk).  [@jwmoz](http://twitter.com/jwmoz).**
